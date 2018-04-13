@@ -68,7 +68,8 @@
 							morphEl.querySelector( 'svg > path' ).setAttribute( 'd', initialPath );
 							// animate path
 							path.stop().animate( { 'path' : steps.open }, 300, mina.easein );
-							var num = Math.ceil(Math.random()*13);
+							//var num = Math.ceil(Math.random()*13);
+							var num = randomNum(1,13);
 							var mycars=new Array(".","吃干锅","吃串串","吃烧烤","吃小吃","吃中餐","吃火锅","吃快餐","吃砂锅","吃冒菜","吃西餐","吃自助餐","吃素","喝风");
 							document.getElementById('ss').innerHTML = mycars[num];
 							
@@ -81,7 +82,19 @@
 			})();
 		</script>
 		<script>
-		
+		function randomNum(minNum,maxNum){ 
+		    switch(arguments.length){ 
+			case 1: 
+			    return parseInt(Math.random()*minNum+1,10); 
+			break; 
+			case 2: 
+			    return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+			break; 
+			    default: 
+				return 0; 
+			    break; 
+		    } 
+		} 
 		
 		</script>
 	</body>
